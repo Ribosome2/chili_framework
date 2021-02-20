@@ -38,8 +38,45 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	if(wnd.kbd.KeyIsPressed(VK_UP))
+	{
+		y += 3;
+	}
+
+	if (wnd.kbd.KeyIsPressed(VK_DOWN))
+	{
+		y -= 3;
+	}
+
+	if (wnd.kbd.KeyIsPressed(VK_LEFT))
+	{
+		x -= 3;
+	}
+
+	if (wnd.kbd.KeyIsPressed(VK_RIGHT))
+	{
+		x += 3;
+	}
+
+	if(wnd.kbd.KeyIsPressed(VK_CONTROL))
+	{
+		gb = 0;
+	}
+
+	shapeIsChanged = wnd.kbd.KeyIsPressed(VK_SHIFT);
 }
 
 void Game::ComposeFrame()
 {
+	if(shapeIsChanged)
+	{
+		
+	}else
+	{
+		
+	}
+	gfx.PutPixel(-5 + x, 5 + y, 255, gb, gb);
+	gfx.PutPixel(-5 + x, -5 + y, 255, gb, gb);
+	gfx.PutPixel(5 + x, 5 + y, 255, gb, gb);
+	gfx.PutPixel(5 + x, -5 + y, 255, gb, gb);
 }
