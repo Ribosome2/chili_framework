@@ -50,16 +50,12 @@ private:
 	std::mt19937 rng;
 	std::uniform_int_distribution<int> xDist;
 	std::uniform_int_distribution<int> yDist;
+	std::uniform_int_distribution<int> vxDist;
+	std::uniform_int_distribution<int> vyDist;
 	Dude dude;
-	Poo poo0;
-	Poo poo1;
-	Poo poo2;
-	Poo poo3;
-	Poo poo4;
-	Poo poo5;
-	Poo poo6;
-	Poo poo7;
-	Poo poo8;
+	static constexpr  int pooNumber = 100;
+	Poo poos[pooNumber];
+	
 	bool isStarted = false;
 	/********************************/
 };

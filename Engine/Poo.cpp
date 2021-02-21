@@ -1,13 +1,14 @@
 #include "Poo.h"
 #include "Graphics.h"
 
-Poo::Poo(int in_x, int in_y, int in_vx, int in_vy)
+void Poo::Init(int in_x, int in_y, int in_vx, int in_vy)
 {
 	x = in_x;
 	y = in_y;
 	vx = in_vx;
 	vy = in_vy;
 }
+
 
 void Poo::Update()
 {
