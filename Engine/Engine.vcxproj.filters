@@ -57,12 +57,6 @@
     <ClInclude Include="COMInitializer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dude.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Poo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DXErr.cpp">
@@ -90,12 +84,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="COMInitializer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Dude.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Poo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
