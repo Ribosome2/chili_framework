@@ -8,9 +8,8 @@ class Poo
 public:
 	void Init(int in_x, int in_y, int in_vx, int in_vy);
 	void Update();
-	bool ProcessConsumption(const Dude& dude);
+	bool TestCollision(const Dude& dude);
 	void Draw(Graphics& gfx) const;
-	bool IsEaten() const;
 private:
 	int x;
 	int y;
@@ -18,5 +17,4 @@ private:
 	int vy;
 	static constexpr int width = 24;
 	static constexpr int height = 24;
-	bool isEaten = false;
 };

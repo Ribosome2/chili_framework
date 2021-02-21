@@ -9,6 +9,6 @@ private:
 	int posX = 10;
 	int posY = 10;
 	int width=10;
-	static  constexpr  int height = 50;
+	static  constexpr  int height = 25;
 };
 

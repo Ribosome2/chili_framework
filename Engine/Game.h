@@ -59,5 +59,6 @@ private:
 	PooCountBar pooCountBar;
 	
 	bool isStarted = false;
+	bool isGameOver = false;
 	/********************************/
 };
