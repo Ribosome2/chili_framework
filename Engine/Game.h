@@ -26,6 +26,7 @@
 #include "Poo.h"
 #include "Dude.h"
 #include <random>
+#include "PooCountBar.h"
 class Game
 {
 public:
@@ -53,8 +54,9 @@ private:
 	std::uniform_int_distribution<int> vxDist;
 	std::uniform_int_distribution<int> vyDist;
 	Dude dude;
-	static constexpr  int pooNumber = 100;
+	static constexpr  int pooNumber = 10;
 	Poo poos[pooNumber];
+	PooCountBar pooCountBar;
 	
 	bool isStarted = false;
 	/********************************/

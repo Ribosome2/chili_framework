@@ -55,7 +55,10 @@ void Game::UpdateModel()
 		for(int i=0;i<pooNumber;i++)
 		{
 			poos[i].Update();
-			poos[i].ProcessConsumption(dude);
+			if (!poos[i].IsEaten() && poos[i].ProcessConsumption(dude))
+			{
+				pooCountBar.AddWidth(1);
+			}
 		}
 
 	}
@@ -28442,5 +28445,8 @@ void Game::ComposeFrame()
 				poos[i].Draw(gfx);
 			}
 		}
+
+		pooCountBar.Draw(gfx);
+
 	}
 }

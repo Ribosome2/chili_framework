@@ -8,7 +8,7 @@ class Poo
 public:
 	void Init(int in_x, int in_y, int in_vx, int in_vy);
 	void Update();
-	void ProcessConsumption(const Dude& dude);
+	bool ProcessConsumption(const Dude& dude);
 	void Draw(Graphics& gfx) const;
 	bool IsEaten() const;
 private:
