@@ -23,10 +23,12 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
-#include "Poo.h"
-#include "Dude.h"
+#include "Board.h"
+#include "Snake.h"
 #include <random>
-#include "PooCountBar.h"
+#include "SoundEffect.h"
+#include "FrameTimer.h"
+
 class Game
 {
 public:
@@ -39,26 +41,31 @@ private:
 	void UpdateModel();
 	/********************************/
 	/*  User Functions              */
-	void DrawGameOver(int x, int y);
-	void DrawTitleScreen(int x, int y);
 	/********************************/
 private:
 	MainWindow& wnd;
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
-	std::random_device rd;
+	GameSettings settings = "settings.txt";
+	Board brd;
+	Snake snek;
+	Location delta_loc = { 1,0 };
 	std::mt19937 rng;
-	std::uniform_int_distribution<int> xDist;
-	std::uniform_int_distribution<int> yDist;
-	std::uniform_int_distribution<int> vxDist;
-	std::uniform_int_distribution<int> vyDist;
-	Dude dude;
-	static constexpr  int pooNumber = 10;
-	Poo poos[pooNumber];
-	PooCountBar pooCountBar;
-	
-	bool isStarted = false;
-	bool isGameOver = false;
+	FrameTimer ft;
+	// SoundEffect sfxEat = SoundEffect({ L"Sounds\\Eat.wav" });
+	// SoundEffect sfxSlither = SoundEffect({ L"Sounds\\Slither0.wav",L"Sounds\\Slither1.wav",L"Sounds\\Slither2.wav" });
+	// Sound sndMusic = Sound(L"Sounds\\Music_Loop.wav", Sound::LoopType::AutoFullSound);
+	// Sound sndTitle = Sound(L"Sounds\\Title.wav");
+	// SoundEffect sndFart = SoundEffect({ L"Sounds\\Fart.wav" });
+	static constexpr float snekMovePeriodMin = 0.040f;
+	static constexpr float snekMovePeriodSpeedup = 0.15f;
+	int nPoison;
+	int nFood;
+	float snekMovePeriod = 0.4f;
+	float snekMoveCounter = 0.0f;
+	float snekSpeedupFactor;
+	bool gameIsOver = false;
+	bool gameIsStarted = false;
 	/********************************/
 };

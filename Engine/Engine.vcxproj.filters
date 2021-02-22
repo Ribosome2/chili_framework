@@ -16,6 +16,18 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{8b6c92a8-f65d-451e-80e3-d65773602b92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\PooGame">
+      <UniqueIdentifier>{89fd12d2-143b-4bd1-a64e-fa9971b5cb9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PooGame">
+      <UniqueIdentifier>{33e15eb9-40d1-4ccc-ac7d-9bb1341b9805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SnakeGame">
+      <UniqueIdentifier>{e264bc76-84b4-4196-b06a-dfd71bbc05f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SnakeGame">
+      <UniqueIdentifier>{9f86eb0c-a088-4e78-b125-9c9b09745b1a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChiliWin.h">
@@ -57,13 +69,31 @@
     <ClInclude Include="COMInitializer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dude.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Poo.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\PooGame</Filter>
     </ClInclude>
     <ClInclude Include="PooCountBar.h">
+      <Filter>Header Files\PooGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Dude.h">
+      <Filter>Header Files\PooGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Snake.h">
+      <Filter>Header Files\SnakeGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteCodex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSettings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -95,13 +125,31 @@
     <ClCompile Include="COMInitializer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dude.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Poo.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\PooGame</Filter>
     </ClCompile>
     <ClCompile Include="PooCountBar.cpp">
+      <Filter>Source Files\PooGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Dude.cpp">
+      <Filter>Source Files\PooGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>Source Files\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteCodex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSettings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
